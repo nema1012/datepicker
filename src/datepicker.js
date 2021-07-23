@@ -90,6 +90,13 @@ function datepicker(selectorOrElement, options) {
 }
 
 /*
+ * return datepicker
+ */
+function findDatePicker(id) {
+  return datepickers.filter(function(picker) { return picker.id === id });
+}
+
+/*
  *  Applies the event listeners.
  *  This will be called the first time datepicker is run.
  *  It will also be called on the first run *after* having removed
@@ -1746,4 +1753,4 @@ function instanceToggleOverlay() {
 }
 
 
-export default datepicker
+export default {datepicker, findDatePicker}
